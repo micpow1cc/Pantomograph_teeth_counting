@@ -15,3 +15,8 @@ predicting number of teeths on a pantomograph. Model was trained on 42 X-ray pho
 ### Confusion Matrix for train set:
 
 ![conf](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/Img/confusion_matrix.png)
+
+##
+### losses, precision-recall,metrics curves:
+
+![conf](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/Img/results1.png)
