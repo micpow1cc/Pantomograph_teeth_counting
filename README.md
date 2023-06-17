@@ -1,4 +1,4 @@
-## Tooth Detection GUI app
+## Tooth Detection GUI program
 
 I've coded program based on algorythm YOLOv5s(github: https://github.com/ultralytics/yolov5). Program is using convolutional neural networks for
 predicting number of teeth on a pantomograph. Model was trained on 42 X-ray photos of teeth. For better performance I've decided to make 7 classes
