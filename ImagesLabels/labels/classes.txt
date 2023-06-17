@@ -1,0 +1,8 @@
+gorny_przedni
+dolny_przedni
+gorny_przedtrzonowy
+dolny_przedtrzonowy
+gorny_trzonowy
+dolny_trzonowy
+plomba
+
