@@ -23,7 +23,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
 
-"""
+
 class ImageLabel(QLabel):
     def __init__(self):
         super().__init__()
@@ -67,7 +67,7 @@ class AppDemo(QWidget):
 
     def dropEvent(self, event):
         if event.mimeData().hasImage:
-            model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp36/weights/last.pt',
+            model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp36/weights/last.pt', # here use your path to downloaded model
                                    force_reload=False)
             event.setDropAction(Qt.CopyAction)
             file_path = event.mimeData().urls()[0].toLocalFile()
@@ -82,8 +82,7 @@ class AppDemo(QWidget):
             plomba = re.compile('plomba')
             for item in split:
                 string_split += ' '+ item
-            if plomba.search(string_split): # jesli w outpucie modelu zostalo znalezione slowo plomba
-                # program liczy ostatnią wartość listy (ilosc plomb) a potem ilosc zebow
+            if plomba.search(string_split): # if in models output word "plomba" was find this code calculates last value of the list (number of plomba's) and next amount of tooth
                 for item in split:
                     if item.isdigit():
                         number_of_teeth.append(item)
@@ -125,7 +124,7 @@ demo = AppDemo()
 demo.show()
 sys.exit(app.exec_())
 """
-#Kod odpowiadający za testowanie modelu
+#Code which loads a model and shows an image with predicted tooth/fillings
 img = 'C:\\Users\\micpo\\PycharmProjects\\OBR_MED\\test_zeby\\DentalPanoramicXrays\\Images\\18.png'
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp36/weights/last.pt',
                                    force_reload=False)
@@ -135,8 +134,10 @@ matplotlib.use('TkAgg')
 plt.imshow(np.squeeze(results.render()))
 plt.show()
 """
-#linia kodu pozwalająca uruchomić trenowanie modelu w pętli dla różnych wartości parametru batch 
-os.system(f"cd C:\\Users\\micpo\\PycharmProjects\\OBR_MED\\yolov5 && python train.py --img 320 --batch {i} --epochs 750 --data dataset.yml --weights yolov5s.pt --workers 2")
+
+#This code i used for model training in a loop for different batch sizes
+"""
+
 for i in range(1,7):
     os.system(f"cd C:\\Users\\micpo\\PycharmProjects\\OBR_MED\\yolov5 && python train.py --img 320 --batch {2**i} --epochs 750 --data dataset.yml --weights yolov5s.pt --workers 2")
 """
