@@ -53,12 +53,16 @@ Enjoy using the image analysis application with the YOLOv5 model!
 
 
 ### Results:
+Test_photo_1
 ![zeby1.png](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/zeby1.png)
-##  
+##
+Test_photo_2
 ![zeby2.png](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/Img/zeby2.png)
 ##
+Test_photo_3
 ![zeby2.png](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/Img/zeby3.png)
 ##
+Test_photo_4
 ![zeby2.png](https://github.com/micpow1cc/Pantomograph_teeth_counting/blob/main/Img/zeby4.png)
 ##
 ### Confusion Matrix for train set:
